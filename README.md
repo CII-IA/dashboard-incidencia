@@ -1,10 +1,8 @@
 # Dashboard de Exploraciones — Incidencia Delictiva Jalisco
 
-Plantilla de dashboard en Streamlit para que cada pasante "vacíe" sus
+Plantilla de dashboard en Streamlit para que cada colaborador descargue sus
 exploraciones de datos en un lugar estandarizado, organizadas por tipo de
-visualización. Trae ejemplos dummy funcionando desde el día uno; cuando
-estén los datos reales, basta colocarlos en `data/` y todo se actualiza
-solo.
+visualización.
 
 ## Estructura
 
@@ -58,27 +56,15 @@ desde el primer momento.
 4. Recarga la app — tu exploración aparece sola en su pestaña, junto a un
    selector para elegirla.
 
-## Conectar datos reales
+## Streamlit Community Cloud [Desplegado ✅]
 
-Copia tus archivos a `data/` con estos nombres exactos (ver
-`data/README.md` para columnas esperadas):
-
-- `incidentes_delictivos.parquet`
-- `contexto_h3.parquet`
-- `denue_jalisco.parquet`
-
-En cuanto existan, `utils/data_loader.py` los detecta y deja de usar datos
-dummy — para TODAS las exploraciones a la vez.
-
-## Desplegar gratis (Streamlit Community Cloud)
-
-1. Sube esta carpeta a un repositorio de GitHub (puede ser privado).
+1. Sube esta carpeta a un repositorio de GitHub (puede ser privado). ✅
 2. Entra a [share.streamlit.io](https://share.streamlit.io) e inicia sesión
-   con tu cuenta de GitHub.
-3. **"New app"** → selecciona el repo/rama → *main file path*: `app.py`.
+   con tu cuenta de GitHub. ✅
+3. **"New app"** → selecciona el repo/rama → *main file path*: `app.py`. ✅
 4. **Deploy**. Queda en una URL pública tipo `https://tu-app.streamlit.app`,
    corriendo de forma indefinida (se "duerme" sin uso y despierta solo al
-   abrir el link — no hay límite de una semana).
+   abrir el link — no hay límite de una semana). ✅
 
 Si los `.parquet` reales son muy grandes para el repo (límite ~100 MB,
 ideal <25 MB), considera subir una muestra representativa o usar Git LFS.
